@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit - Registrar Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Menú -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="dashboard.html">🏋️ PowerFit</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="registro-usuario.html">Registrar Usuario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registrar-asistencia.html">Registrar Asistencia</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="login.html">Salir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0 p-4">
+                    <h3 class="fw-bold mb-3 text-primary">📝 Registro de Nuevo Usuario y Membresía</h3>
+                    <form id="formUsuario">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Documento de Identidad</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de Membresía</label>
+                                <select class="form-select" required>
+                                    <option value="">Seleccione un plan...</option>
+                                    <option value="1">Mensual Estándar</option>
+                                    <option value="2">Trimestral Plan Fit</option>
+                                    <option value="3">Anual Power</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary fw-bold mt-2">Guardar Usuario</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('formUsuario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Usuario y membresía registrados con éxito en el sistema!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
